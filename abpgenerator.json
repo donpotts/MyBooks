@@ -1,0 +1,189 @@
+{
+  "Name": "MyBooks",
+  "EntitySchemas": [
+    {
+      "Name": "Book",
+      "Namespace": "MyBooks.Books",
+      "Key": "Id",
+      "Properties": {
+        "Id": "int",
+        "Name": "string?",
+        "PublishDate": "DateTime",
+        "Price": "double"
+      },
+      "Data": [
+        {
+          "Id": 1,
+          "Name": "Your Book Name",
+          "PublishDate": "2024-07-10T00:00:00",
+          "Price": 15.1
+        },
+        {
+          "Id": 2,
+          "Name": "My Book Name",
+          "PublishDate": "2024-07-10T00:00:00",
+          "Price": 15.5
+        },
+        {
+          "Id": 3,
+          "Name": "Her Book Name",
+          "PublishDate": "2024-07-10T00:00:00",
+          "Price": 15.8
+        },
+        {
+          "Id": 4,
+          "Name": "His Book Name",
+          "PublishDate": "2024-07-10T00:00:00",
+          "Price": 159.9
+        }
+      ]
+    },
+    {
+      "Name": "Author",
+      "Namespace": "MyBooks.Authors",
+      "Key": "Id",
+      "Properties": {
+        "Id": "int",
+        "Name": "string?",
+        "BirthDate": "DateTime",
+        "ShortBio": "string?"
+      },
+      "Data": [
+        {
+          "Id": 1,
+          "Name": "The Author",
+          "BirthDate": "2000-01-01T00:00:00",
+          "ShortBio": "Computer programmer and author of many papers and books."
+        },
+        {
+          "Id": 2,
+          "Name": "My Author",
+          "BirthDate": "2000-01-02T00:00:00",
+          "ShortBio": "Computer programmer and author of many papers and books."
+        },
+        {
+          "Id": 3,
+          "Name": "Your Author",
+          "BirthDate": "2000-01-03T00:00:00",
+          "ShortBio": "Computer programmer and author of many papers and books."
+        }
+      ]
+    },
+    {
+      "Name": "Category",
+      "Namespace": "MyBooks.Categories",
+      "Key": "Id",
+      "Properties": {
+        "Id": "int",
+        "Name": "string?"
+      },
+      "Data": [
+        {
+          "Id": 1,
+          "Name": "C#"
+        },
+        {
+          "Id": 2,
+          "Name": "Web Programming"
+        },
+        {
+          "Id": 3,
+          "Name": "Database"
+        },
+        {
+          "Id": 4,
+          "Name": "Graphic Design"
+        }
+      ]
+    }
+  ],
+  "Relationships": [
+    {
+      "Source": "Book",
+      "Target": "Author",
+      "Type": 2,
+      "ForeignKey": null,
+      "Required": false,
+      "DisplayProperty": "Name",
+      "OnDelete": 0,
+      "JoinData": [
+        {
+          "Key": 1,
+          "Value": 1
+        },
+        {
+          "Key": 1,
+          "Value": 2
+        },
+        {
+          "Key": 2,
+          "Value": 1
+        },
+        {
+          "Key": 3,
+          "Value": 1
+        },
+        {
+          "Key": 3,
+          "Value": 2
+        },
+        {
+          "Key": 3,
+          "Value": 3
+        },
+        {
+          "Key": 4,
+          "Value": 2
+        },
+        {
+          "Key": 4,
+          "Value": 3
+        }
+      ]
+    },
+    {
+      "Source": "Book",
+      "Target": "Category",
+      "Type": 2,
+      "ForeignKey": null,
+      "Required": false,
+      "DisplayProperty": "Name",
+      "OnDelete": 0,
+      "JoinData": [
+        {
+          "Key": 1,
+          "Value": 1
+        },
+        {
+          "Key": 1,
+          "Value": 2
+        },
+        {
+          "Key": 2,
+          "Value": 1
+        },
+        {
+          "Key": 3,
+          "Value": 1
+        },
+        {
+          "Key": 3,
+          "Value": 2
+        },
+        {
+          "Key": 3,
+          "Value": 3
+        },
+        {
+          "Key": 4,
+          "Value": 2
+        },
+        {
+          "Key": 4,
+          "Value": 3
+        }
+      ]
+    }
+  ],
+  "OpenIddictAppClient": true
+}
